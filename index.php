@@ -29,7 +29,16 @@
   <meta name="facebook-domain-verification" content="" />
 
   <!--================== stylesheet ==================-->
-  <?php include('stylesheet.php')?>
+  <?php
+  $sto = stream_context_create(
+      array(
+          'http' => array(
+              'timeout' => 1
+              ),
+          )
+      );
+  echo file_get_contents("stylesheet.php", 0 , $sto);
+  ?>
 </head>
 
 <body>
