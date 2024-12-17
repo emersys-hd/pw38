@@ -30,14 +30,14 @@
 
   <!--================== stylesheet ==================-->
   <?php
-  $sto = stream_context_create(
+    $sto = stream_context_create(
       array(
-          'http' => array(
-              'timeout' => 1
-              ),
-          )
+        'https' => array(
+          'timeout' => 1
+          ),
+        )
       );
-  echo file_get_contents("stylesheet.php", 0 , $sto);
+    echo file_get_contents("stylesheet.php", 0 , $sto);
   ?>
 </head>
 
@@ -380,13 +380,31 @@
     </section>
 
     <!--==================== ::Footer Start ====================-->
-    <?php include('footer.php') ?>
+    <?php
+      $sto = stream_context_create(
+        array(
+          'https' => array(
+            'timeout' => 1
+            ),
+          )
+        );
+      echo file_get_contents("footer.php", 0 , $sto);
+    ?>
     <!--===================== ::Footer End =====================-->
 
   </main>
 
   <!--==================== ::Script Start ====================-->
-  <?php include('script.php') ?>
+  <?php
+    $sto = stream_context_create(
+      array(
+        'https' => array(
+          'timeout' => 1
+          ),
+        )
+      );
+    echo file_get_contents("script.php", 0 , $sto);
+  ?>
   <!--===================== ::Script End =====================-->
 
 </body>
