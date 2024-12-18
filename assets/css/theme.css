@@ -179,6 +179,39 @@ p {
 }
 
 /*==================== Utility ====================*/
+.preloader {
+  background-color: var(--bs-primary);
+  position: fixed;
+  z-index: 1190;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.preloader .preloader-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.uploadremove {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border: 0;
+  padding: 0;
+  background: var(--bs-danger);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
 img {
   width: 100%;
 }
@@ -222,9 +255,13 @@ img {
     column-gap: 1rem;
   }
 }
+main {
+  overflow-x: hidden;
+}
 section {
   padding-top: 9rem;
   padding-bottom: 9rem;
+  overflow: hidden;
 }
 
 @media (max-width: 1199.98px) {
