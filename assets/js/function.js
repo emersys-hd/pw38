@@ -266,7 +266,7 @@ var e = {
 
 	// START: 03 Sticky Header
 	stickyHeader: function () {
-		if (window.matchMedia("(min-width: 992px)").matches) {
+		if (window.matchMedia("(min-width: 1px)").matches) {
 			var stickyNav = e.select(".header-sticky");
 			if (e.isVariableDefined(stickyNav)) {
 				document.addEventListener("scroll", function (event) {
