@@ -1779,12 +1779,39 @@ section {
 .header-sticky-on .navbar-nav {
   --bs-nav-link-padding-y: 1rem;
 }
+header.header-sticky-on {
+  position: fixed;
+  z-index: 1040;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  -webkit-animation: fadeInDown 0.5s;
+          animation: fadeInDown 0.5s;
+  width: 100%;
+}
+.header-sticky-on .navbar {
+  margin: 0.5rem auto auto;
+}
+@media (max-width: 1199.98px) {
+  header.header-sticky-on .navbar-expand-xl .navbar-brand {
+    padding: 0.5rem 0;
+  }
+  header.header-sticky-on .navbar {
+    --bs-navbar-padding-y: 0;
+    background-color: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(6px);
+    border-radius: 0.5rem;
+    max-width: calc(90% + 2rem);
+    margin: 0.25rem auto auto;
+  }
+}
 @media (min-width: 1200px) {
   header {
     -webkit-animation: fadeInUp 0.5s;
             animation: fadeInUp 0.5s;
   }
-  header.header-sticky-on {
+  /* header.header-sticky-on {
     position: fixed;
     z-index: 1040;
     top: 0;
@@ -1794,6 +1821,14 @@ section {
     -webkit-animation: fadeInDown 0.5s;
             animation: fadeInDown 0.5s;
     width: 100%;
+  } */
+  .navbar {
+    --bs-navbar-padding-y: 0;
+    background-color: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(6px);
+    border-radius: 50rem;
+    max-width: calc(90% + 2rem);
+    margin: 1rem auto auto;
   }
   header.header-sticky-on .navbar-top {
     display: none !important;
@@ -1803,17 +1838,6 @@ section {
   }
   header.header-sticky-on .navbar-brand .navbar-brand-item {
     height: 35px;
-  }
-  .navbar {
-    --bs-navbar-padding-y: 0;
-    background-color: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(6px);
-    border-radius: 50rem;
-    max-width: calc(90% + 2rem);
-    margin: 1rem auto auto;
-  }
-  .header-sticky-on .navbar {
-    margin: 0.5rem auto auto;
   }
   .header-sticky-on .navbar .container-fluid {
     --bs-gutter-x: 1.5rem
@@ -1872,6 +1896,10 @@ section {
             transform: translateY(0);
   }
 }
+.navbar-toggler {
+  border: 0;
+  padding-right: 0;
+}
 .navbar-toggler .navbar-toggler-animation {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -1896,6 +1924,9 @@ section {
   position: absolute;
   width: 100%;
   border-radius: 30px;
+}
+header.header-sticky-on .navbar-toggler .navbar-toggler-animation span {
+  background: #000;
 }
 .navbar-toggler .navbar-toggler-animation span:nth-child(1) {
   top: 10%;
