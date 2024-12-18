@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,6 +54,36 @@
   <link rel="stylesheet" type="text/css" href="assets/vendor/aos/aos.css">
   <link rel="stylesheet" type="text/css" href="assets/css/bs-custom.css">
   <link rel="stylesheet" type="text/css" href="assets/css/theme.css">
+
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }      
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    };
+    </script>
 </head>
 
 <body>
@@ -198,15 +227,9 @@
             <div class="hero_img_block" data-aos="fade-down">
               <img src="assets/images/bg/home-hero.avif" alt="ilmupedia">
             </div>
-            <figure class="layer svg_parallax star_object svg_object_yellow" data-aos="zoom-in" data-depth="-0.5">
-              <?= file_get_contents("assets/images/element/star.svg"); ?>
-            </figure>
-            <figure class="layer svg_parallax circle_object svg_object_blue" data-aos="zoom-in" data-depth="0.4">
-              <?= file_get_contents("assets/images/element/circle.svg"); ?>
-            </figure>
-            <figure class="layer svg_parallax triangle_object svg_object_orange" data-aos="zoom-in" data-depth="0.8">
-              <?= file_get_contents("assets/images/element/triangle.svg"); ?>
-            </figure>
+            <figure w3-include-html="assets/images/element/star.html" class="layer svg_parallax star_object svg_object_yellow" data-aos="zoom-in" data-depth="-0.5"></figure>
+            <figure w3-include-html="assets/images/element/circle.html" class="layer svg_parallax circle_object svg_object_blue" data-aos="zoom-in" data-depth="0.4"></figure>
+            <figure w3-include-html="assets/images/element/triangle.html" class="layer svg_parallax triangle_object svg_object_orange" data-aos="zoom-in" data-depth="0.8"></figure>
           </div>
           <!-- ::HeroImage End -->
 
