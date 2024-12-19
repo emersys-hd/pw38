@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ilmupedia</title>
+  <meta name="description"
+    content="ilmupedia.co.id adalah portal komunitas milik Telkomsel untuk para anak muda yang keren, kreatif, dan inspiratif. Temukan banyak keuntungan dengan bergabung dengan website ini.">
+  <meta name="keywords"
+    content="LOOP, Telkomsel, LOOP Station, Info produk, LOOP event, Musik, Games, Film, Hobi, Hang Out Place, simPATI">
+  <meta name="author" content="Ilmupedia">
+  <meta property="og:title" content="Ilmupedia | Ilmupedia.co.id" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@loop_id">
+  <meta name="twitter:title" content="Ilmupedia Ilmupedia">
+  <meta name="twitter:description"
+    content="ilmupedia.co.id adalah portal komunitas milik Telkomsel untuk para anak muda yang keren, kreatif, dan inspiratif. Temukan banyak keuntungan dengan bergabung dengan website ini.">
+  <meta name="twitter:creator" content="@loop_id">
+  <meta name="twitter:image:src" content="">
+  <meta name="twitter:domain" content="ilmupedia.co.id">
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:description"
+    content="ilmupedia.co.id adalah portal komunitas milik Telkomsel untuk para anak muda yang keren, kreatif, dan inspiratif. Temukan banyak keuntungan dengan bergabung dengan website ini.">
+  <meta property="og:image:secure_url" content="" />
+  <meta property="fb:app_id" content="" />
+  <meta name="facebook-domain-verification" content="" />
+
+  <!--================== stylesheet ==================-->
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+  <link rel="manifest" href="assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/bs-custom.css">
+  <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/vendor/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/vendor/aos/aos.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/theme.css">
+</head>
+
+<script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }      
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        return;
+      }
+    }
+  };
+</script>
+
+<div class="preloader">
+  <div class="preloader-item">
+    <img src="assets/images/logo-primary.svg" alt="">
+  </div>
+</div>
+
+<body>
+  <!-- ::Header Start -->
+  <header class="header-sticky header-absolute" w3-include-html="navbar.html">
+    
+  </header>
+  <!-- ::Header End -->
+
+  <main class="">
+    <section class="parallax-wrap d-flex align-items-center min-vh-100">
+      <div class="container">
+        <div class="row justify-content-center align-items-center gy-6">
+          <div class="col-12 col-xl-6 text-center" data-aos="zoom-in">
+            <img src="assets/images/element/error-404-2.webp" class="layer col-md-9 col-lg-4 col-xl-8 mb-3" alt="error"
+              data-depth="0.8">
+            <h3 class="text-uppercase"><span class="fw-light">This page</span> has been eaten!</h3>
+            <a href="home" class="btn btn-danger mt-3">Go Back Home</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!--==================== ::Footer Start ====================-->
+    <footer class=" py-6" w3-include-html="footer.html">
+      
+    </footer>
+    <div class="back-top"></div>
+    <!--===================== ::Footer End =====================-->
+
+  </main>
+
+  <!--==================== ::Script Start ====================-->
+  <!-- <script src="assets/vendor/@popperjs/core/dist/cjs/popper.js"></script> -->
+  <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+  </script>
+  <script src="assets/js/plugin.js"></script>
+  <script src="assets/vendor/ityped/index.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/function.js"></script>
+  <script>includeHTML();</script>
+  <!--===================== ::Script End =====================-->
+
+</body>
+
+</html>
